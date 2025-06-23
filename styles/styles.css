@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@1,14..32&display=swap');
+
+
+/*
+font family::after
+*/
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide */
+/*  */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --primary-color: #1C398E;
+    --secondary-color: #101828;
+    --text-color: #99a1af;
+
+    /* sizes */
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+    --text-xxl: 48px;
+}
+
+html {
+    /* 62.5% = 16px */
+    font-size: 62.5%;
+
+}
+
+body {
+    font-family: Inter, sans-serif;
+}
+
+/* Container */
+.container {
+    display: block;
+    padding: 0 10px;
+    background: red;
+    margin-left: auto;
+    margin-right: auto;
+    /* for small screen */
+    max-width: 100%;
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1380px;
+    }
+}
+
+
+
+
+/* PWA */
+/* progressive web application */
+
+/* desktop-first */
+/* .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+} */
+
+/* mobile-first */
+/* .grid-container {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+ */
