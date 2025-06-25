@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@1,14..32&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap');
 
 /*
 font family::after
@@ -43,8 +42,7 @@ body {
 /* Container */
 .container {
     display: block;
-    padding: 0 10px;
-    background: red;
+    padding: 0 20px;
     margin-left: auto;
     margin-right: auto;
     /* for small screen */
@@ -85,3 +83,37 @@ body {
     }
 }
  */
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    padding: 20px 0;
+    background-color: var(--secondary-color);
+}
+
+header .header-content {
+    display: flex;
+    justify-content: space-between;
+
+    color: white
+}
+
+header .logo {
+    font-size: var(--text-xl);
+    font-weight: bold;
+}
+
+header nav a {
+    font-size: var(--text-sm);
+    margin: 0 10px;
+    color: #99a1af;
+    transition: color .2s;
+}
+
+header nav a:hover {
+    color: white;
+}
