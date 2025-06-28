@@ -240,9 +240,17 @@ section.tools {
 }
 
 .tool-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: color-mix(in srgb, var(--primary-color) 70%, transparent);
     margin-bottom: 20px;
     position: relative;
+}
+
+.tool-icon i {
+    font-size: 3rem;
+    color: white;
 }
 
 .tool-icon::before {
