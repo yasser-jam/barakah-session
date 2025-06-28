@@ -26,7 +26,8 @@ font family::after
     --text-base: 16px;
     --text-lg: 18px;
     --text-xl: 20px;
-    --text-xxl: 48px;
+    --text-xxl: 36px;
+    --text-xxxl: 48px;
 }
 
 html {
@@ -42,7 +43,7 @@ body {
 /* Container */
 .container {
     display: block;
-    padding: 0 20px;
+    padding: 0 32px;
     margin-left: auto;
     margin-right: auto;
     /* for small screen */
@@ -106,6 +107,23 @@ button.btn-light {
     background-color: var(--text-color);
 }
 
+/* Headings */
+.section-title {
+    font-weight: 800;
+    font-size: var(--text-xxl);
+    text-align: center;
+
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-weight: 500;
+    font-size: var(--text-xl);
+    text-align: center;
+    
+    color: var(--text-color);
+}
+
 /* Header */
 header {
     padding: 20px 0;
@@ -153,7 +171,7 @@ header nav a:hover {
 }
 
 .hero h1 {
-    font-size: var(--text-xxl);
+    font-size: var(--text-xxxl);
     font-weight: 800;
     color: white;
     margin-bottom: 1rem;
@@ -184,4 +202,67 @@ header nav a:hover {
     border: 10px solid white;
     border-radius: 10px;
     margin-bottom: -200px;
+}
+
+
+/* Tools Section */
+section.tools {
+    margin-top: 4rem;
+    padding: 16rem 0
+}
+
+.tools-cards {
+    margin-top: 8rem;
+    gap: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+@media (max-width: 767px) {
+    .tools-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tool-card {
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool-icon, .tool-icon::before {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.tool-icon {
+    background-color: color-mix(in srgb, var(--primary-color) 70%, transparent);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.tool-icon::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: -1;
+    background-color: color-mix(in srgb, var(--primary-color) 50%, transparent)
+    /* background-color: var(--primary-color, .1); */
+}
+
+.tool-title {
+    font-weight: bold;
+    font-size: var(--text-xl);
+    margin-bottom: 10px;
+}
+
+.tool-text {
+    color: var(--text-color);
+    line-height: 1.5;
+    font-size: var(--text-base);
 }
